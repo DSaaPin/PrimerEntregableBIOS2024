@@ -9,17 +9,53 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1>Lista de tareas</h1>
     </header>
     <main>
-        <section id="formlario">
-        <form action="submit" method="post">
-            
-        </form>
-    </section>
-    <section id="lista"></section>
+        <div class="container-secciones">
+            <section class="seccion-form" id="formulario">
+                <h2>Agregar nueva tarea</h2>
+                <form action="/submit" method="post">
+                    <div class="inputform">
+                        <div class="form-row">
+                            <label for="titulo">Título:</label>
+                            <input type="text" id="titulo" name="titulo" placeholder="Nombre de la tarea" required />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row_descripcion">
+                            <div>
+                                <label for="descripcion">Descripción:</label>
+                            </div>
+                            <div>
+                                <textarea id="descripcion" name="descripcion" rows="4" cols="50"
+                                    placeholder="Puedes agregar una descripción de la tarea a realizar..."></textarea>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="fecha">Día a realizar:</label>
+                            <input type="date" id="fecha" name="fecha" />
+                        </div>
+                    </div>
+
+                    <div class="form-botones">
+                        <button type="submit">Guardar</button>
+                        <button type="reset">Cancelar</button>                        
+                </form>
+            </section>
+            <section class="seccion-lista" id="lista">
+                <h2>Tareas actuales</h2>
+
+                <ul>
+                    <li>Tarea 1</li>
+                   <li>Tarea 2</li>
+                   <li>Tarea 3</li>
+                </ul>
+            </section>
+        </div>
     </main>
+    <footer class="footer">&copy; 2024 BIOS - Deborah Saavedra</footer>
 
 </body>
 
