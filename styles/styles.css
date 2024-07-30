@@ -2,22 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    background-color: #bf488265;
+    background-color: #4ba68eab;
     padding: 1rem;    
     text-align: center;  
 }
 
 main {
-    background-color: #bf488233;
-
+    background-color: #4ba68e17;
+    min-height: 85vh;    
 }
 
 h1 {
-    color: #a0386aaf;
+    color: #ffffffd0;
+}
+
+.box-textarea {
+    background: none;
+    border-color: #ab2264;
+    border-radius: 1rem;
+}
+
+.box {
+    background: none;
+    border-color: #ab2264;
+    border-radius: 0.5rem;  
 }
 
 h2 {
@@ -28,40 +45,89 @@ h2 {
 
 .container-secciones {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding:4rem;
+    gap: 4rem;    
+    flex-wrap: wrap;
+    
+}
+
+.seccion-formulario, .seccion-lista  {
+    padding:1rem;
+    flex-basis: 50%;
+    border-color: #ab2264;
+    border-radius: 2.5rem;
+    border-style: solid;
+    color: #a0386aaf ;
     flex-grow: 1;
 }
 
-.seccion-form {
-    border-color: #ab2264;
-    border-radius: 5px;
-    border-style: solid;
-    background-color: #f835042b;
-    
-    
+.seccion-formulario {    
+    background-color: #fad0f9a9;  
 }
-
-.inputform .form-row_descripcion{
-    flex-direction: row;
-}
-/*
-.form-row_descripcion {
-    flex-direction: row;
-}*/
 
 .seccion-lista {
-    border-color: #ab2264;
-    border-radius: 5px;
-    border-style: solid;
-    background-color: #15c85429;
-    
+    background-color: #15c85429;    
 }
+
+.form-row {
+    padding: 1rem;
+}
+
+.input-formulario, .list {
+    padding-top: 1.5rem;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: space-evenly;
+    padding:0.5rem;
+}
+
+.boton-submit, .boton-reset {
+    background-color: #15c85429;
+    color: #ab4b4bde;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 0.5rem;
+    font-size: 16px;
+  }
+  
+  .boton-submit:hover {
+    background-color: #42905d7c;
+  }
+  
+  .boton-reset {
+    background-color: #a0386aaf;
+  }
+  
+  .boton-reset:hover {
+    background-color: #5a6268;
+  }
+  
 
 
 .footer {
-    background-color: #bf488265;
+    background-color: #4ba68eab;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
     margin: auto 0 0;
 }
+
+@media (width >= 768px) {    
+
+    .container-secciones{    
+        flex-direction: row; 
+        flex-wrap: nowrap;
+    }
+    /*
+    .seccion-formulario, .seccion-lista {        
+        flex-grow: 1;
+        min-height: 400px;
+    }*/
+    
+}
+
