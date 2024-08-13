@@ -17,8 +17,8 @@
 }
 
 main {
-    background-color: #4ba6a417;
-    min-height: 85vh;    
+    background-color: #e0f2f1a8;/* #4ba6a417;*/
+    min-height:82vh;    
 }
 
 h1 {
@@ -28,22 +28,25 @@ h1 {
 .box-textarea {
     background: none;
     border-color: #000;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    padding-left: 10px;
 }
 
 .box {
     background: none;
     border-color:#000;
     border-radius: 0.5rem;  
+    padding-left: 10px;
 }
 
 h2 {   
-    text-align: center;   
+    text-align: center;
+    font-size: 20px;   
 }
 span{
     color: #ac356d;
-    /*text-decoration: underline;*/
-    background-color: #a1356736;    
+    background-color: #e0f2f1a8 ;/* #87828436; */
+    padding: 5px;
     border-radius: 0.5rem;
 }
 
@@ -65,7 +68,7 @@ span{
     border-radius: 2.5rem;
     border-style: solid;
     color: #a0386aaf ;
-    flex-grow: 1;
+    /*flex-grow: 1;*/
     box-shadow: 4px 4px 10px 0 #00000047;
     /*padding:1rem;*/
 }
@@ -79,22 +82,32 @@ span{
 }
 
 .form-row {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .input-formulario, .list {
     padding-top: 1.5rem;
+    padding-left: 1rem;
+}
+
+.label-titulo{
+    padding-right: 10px;
+    /*padding: 2px;*/
+    border-radius: 0.5rem;
+    font-size: 17px;
+    background-color: #e0f2f1a8;
+    font-weight: bold;
 }
 
 .form-botones {
     display: flex;
     justify-content: space-evenly;
     padding:0.5rem;
+    padding-bottom: 1rem;
     
 }
 
-.boton-submit, .boton-reset {
-    background-color: #15c85429;
+.boton-submit, .boton-reset {    
     color: #ab4b4bde;
     border: none;
     cursor: pointer;
@@ -103,21 +116,40 @@ span{
     font-size: 16px;
     box-shadow: 4px 4px 10px 0 #00000015
   }
-  
+  .boton-submit{
+  background-color: #b2dfdb;
+}
+
   .boton-submit:hover {
-    background-color: #42905d7c;
+    background-color: #26a699d2;
   }
   
   .boton-reset {
-    background-color: #a0386aaf;
+    background-color: #f8bbd0;
   }
   
   .boton-reset:hover {
-    background-color: #5a6268;
+    background-color: #f06292;
+  }
+
+  .container-tarea{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 10px 30px 10px 30px;
+  }
+
+  .container-tarea_opciones{
+    display: flex;    
+    justify-content: space-between;
+    gap: 1rem;
   }
   
-
-
+  .listaInterna {
+    list-style: none;
+    padding-left: 10px;
+    
+  }
 .footer {
     background-color: #000000d5;
     color: #fff;

@@ -20,14 +20,14 @@
                     <form action="/submit" method="post">
                         <div class="input-formulario">
                             <div class="form-row">
-                                <label for="titulo">Título:</label>
+                                <label class="label-titulo" for="titulo">Título:</label>
                                 <input class="box" type="text" id="titulo" name="titulo"
                                     placeholder="Nombre de la tarea" required />
                             </div>
                             <div class="form-row">
                                 <div class="form-row_descripcion">
                                     <div>
-                                        <label for="descripcion">Descripción:</label>
+                                        <label class="label-titulo" for="descripcion">Descripción:</label>
                                     </div>
                                     <div>
                                         <textarea class="box-textarea" id="descripcion" name="descripcion"
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <label for="fecha">Día a realizar:</label>
+                                <label class="label-titulo" for="fecha">Día a realizar:</label>
                                 <input class="box" type="date" id="fecha" name="fecha" />
                             </div>
                         </div>
@@ -50,9 +50,57 @@
                     <h2><span>Tareas actuales</span></h2>
                     <div class="list">
                         <ul>
-                            <li>Tarea 1</li>
-                            <li>Tarea 2</li>
-                            <li>Tarea 3</li>
+                            <div class="container-tarea">
+                                <div>
+                                    <li>Ir a supermercado
+                                        <ul class="listaInterna">
+                                            <li>Comprar: Carne, papas, mayonesa</li>
+                                            <li>12/08/24</li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="container-tarea_opciones">
+                                    <div><input type="checkbox" name="tareaCheck" id="check" value="tareaCheck">
+                                    </div>
+                                    <div>
+                                        <button>Borrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-tarea">
+                                <div>
+                                    <li>Ir médico
+                                        <ul class="listaInterna">
+                                            <li>Dermatólogo</li>
+                                            <li>26/08/24</li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="container-tarea_opciones">
+                                    <div><input type="checkbox" name="tareaCheck" id="check" value="tareaCheck">
+                                    </div>
+                                    <div>
+                                        <button>Borrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-tarea">
+                                <div>
+                                    <li>Comprar regalo
+                                        <ul class="listaInterna">
+                                            <li>Quizás libro?</li>
+                                            <li>23/08/24</li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="container-tarea_opciones">
+                                    <div><input type="checkbox" name="tareaCheck" id="check" value="tareaCheck">
+                                    </div>
+                                    <div>
+                                        <button>Borrar</button>
+                                    </div>
+                                </div>
+                            </div>
                         </ul>
                     </div>
                 </section>
@@ -60,5 +108,8 @@
         </main>
         <footer class="footer">&copy; 2024 BIOS - Deborah Saavedra</footer>
     </div>
+
+    <script src="/js/script.js"></script>
 </body>
+
 </html>
