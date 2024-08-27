@@ -25,6 +25,10 @@ h1 {
     color: #ac356d;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .box-textarea {
     background: none;
     border-color: #000;
@@ -171,13 +175,17 @@ span{
     background-color:#d4eddae9;
     
 }
-  
 
+.liTitulo {
+    font-size: 17px;
+}
+  
   .listaInterna {
     list-style: none;
     padding-left: 10px;
-    
+    font-size: 14.5px;    
   }
+  
 .footer {
     background-color: #000000d5;
     color: #fff;

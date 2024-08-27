@@ -4,24 +4,28 @@ let tareas = [
         titulo: "Hacer compras fiesta",
         descripcion: "Comprar hamburguesas, bebida, sal",
         fecha: "2024-08-21",
+        estado: "Pendiente",
     },
     {
         id: 2,
         titulo: "Médico",
         descripcion: "Dermatólogo, Dr Díaz",
         fecha: "2024-08-26",
+        estado: "Hecho",
     },
     {
         id: 3,
         titulo: "Llamar electricista",
         descripcion: "Luz cocina y chequeo",
-        fecha: "2024-08-21s",
+        fecha: "2024-08-21",
+        estado: "Pendiente",
     },
     {
         id: 4,
         titulo: "Veterinaria",
         descripcion: "Pagar cuota",
         fecha: "2024-08-15",
+        estado: "Pendiente",
     },
 ];
 
@@ -40,7 +44,7 @@ function mostrarTareas() {
     const elementosTareas = tareas.map((tarea) => {
         return `<div class="container-tarea">
                                 <div>
-                                    <li>${tarea.titulo}
+                                    <li class="liTitulo">${tarea.titulo}
                                         <ul class="listaInterna">
                                             <li>${tarea.descripcion} muestro el id para probar ${tarea.id}</li>
                                             <li>${tarea.fecha}</li>
