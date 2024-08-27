@@ -17,12 +17,16 @@
             <div class="container-secciones">
                 <section class="seccion-formulario" id="formulario">
                     <h2><span>Agregar nueva tarea</span></h2>
-                    <form action="/submit" method="post">
+                    <form onsubmit="agregarTarea(event)">
                         <div class="input-formulario">
                             <div class="form-row">
-                                <label class="label-titulo" for="titulo">Título:</label>
-                                <input class="box" type="text" id="titulo" name="titulo"
-                                    placeholder="Nombre de la tarea" required />
+                                <div>
+                                    <label class="label-titulo" for="titulo">Título:</label>
+                                </div>
+                                <div>
+                                    <input class="box" type="text" id="titulo" name="titulo"
+                                        placeholder="Nombre de la tarea" required />
+                                </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-row_descripcion">
@@ -31,13 +35,17 @@
                                     </div>
                                     <div>
                                         <textarea class="box-textarea" id="descripcion" name="descripcion"
-                                            placeholder="Puedes agregar una descripción de la tarea a realizar..."></textarea><!--rows="4" cols="50"-->
+                                            placeholder="Puedes agregar una descripción de la tarea a realizar..."></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row">
-                                <label class="label-titulo" for="fecha">Día a realizar:</label>
-                                <input class="box" type="date" id="fecha" name="fecha" />
+                                <div>
+                                    <label class="label-titulo" for="fecha">Día a realizar:</label>
+                                </div>
+                                <div>
+                                    <input class="box-date" type="date" id="fecha" name="fecha" />
+                                </div>
                             </div>
                         </div>
                         <div class="form-botones">
@@ -49,58 +57,8 @@
                 <section class="seccion-lista" id="lista">
                     <h2><span>Tareas actuales</span></h2>
                     <div class="list">
-                        <ul>
-                            <div class="container-tarea">
-                                <div>
-                                    <li>Ir a supermercado
-                                        <ul class="listaInterna">
-                                            <li>Comprar: Carne, papas, mayonesa</li>
-                                            <li>12/08/24</li>
-                                        </ul>
-                                    </li>
-                                </div>
-                                <div class="container-tarea_opciones">
-                                    <div><input type="checkbox" name="tareaCheck" id="check" value="tareaCheck">
-                                    </div>
-                                    <div>
-                                        <button>Borrar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-tarea">
-                                <div>
-                                    <li>Ir médico
-                                        <ul class="listaInterna">
-                                            <li>Dermatólogo</li>
-                                            <li>26/08/24</li>
-                                        </ul>
-                                    </li>
-                                </div>
-                                <div class="container-tarea_opciones">
-                                    <div><input type="checkbox" name="tareaCheck" id="check" value="tareaCheck">
-                                    </div>
-                                    <div>
-                                        <button>Borrar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-tarea">
-                                <div>
-                                    <li>Comprar regalo
-                                        <ul class="listaInterna">
-                                            <li>Quizás libro?</li>
-                                            <li>23/08/24</li>
-                                        </ul>
-                                    </li>
-                                </div>
-                                <div class="container-tarea_opciones">
-                                    <div><input type="checkbox" name="tareaCheck" id="check" value="tareaCheck">
-                                    </div>
-                                    <div>
-                                        <button>Borrar</button>
-                                    </div>
-                                </div>
-                            </div>
+                        <ul id="lista-tareas">
+                            
                         </ul>
                     </div>
                 </section>

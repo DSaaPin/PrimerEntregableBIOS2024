@@ -17,7 +17,7 @@
 }
 
 main {
-    background-color: #e0f2f1a8;/* #4ba6a417;*/
+    background-color: #e0f2f1a8;
     min-height:82vh;    
 }
 
@@ -29,14 +29,25 @@ h1 {
     background: none;
     border-color: #000;
     border-radius: 0.5rem;
-    padding-left: 10px;
+    padding-left: 10px;    
+    width:90%;
+    min-height: 55px;
 }
 
-.box {
+.box, .box-date {
     background: none;
     border-color:#000;
     border-radius: 0.5rem;  
     padding-left: 10px;
+    
+}
+
+.box {
+    width:90%;
+}
+
+.box-date {    
+    width:100%;
 }
 
 h2 {   
@@ -45,7 +56,7 @@ h2 {
 }
 span{
     color: #ac356d;
-    background-color: #e0f2f1a8 ;/* #87828436; */
+    background-color: #e0f2f1a8 ;
     padding: 5px;
     border-radius: 0.5rem;
 }
@@ -68,9 +79,7 @@ span{
     border-radius: 2.5rem;
     border-style: solid;
     color: #a0386aaf ;
-    /*flex-grow: 1;*/
-    box-shadow: 4px 4px 10px 0 #00000047;
-    /*padding:1rem;*/
+    box-shadow: 4px 4px 10px 0 #00000047;    
 }
 
 .seccion-formulario {    
@@ -82,7 +91,7 @@ span{
 }
 
 .form-row {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .input-formulario, .list {
@@ -92,9 +101,8 @@ span{
 
 .label-titulo{
     padding-right: 10px;
-    /*padding: 2px;*/
     border-radius: 0.5rem;
-    font-size: 17px;
+    font-size: 18px;
     background-color: #e0f2f1a8;
     font-weight: bold;
 }
@@ -137,6 +145,11 @@ span{
     align-self: center;
     justify-content: space-between;
     padding: 10px 30px 10px 30px;
+    border-radius: 0.5rem;
+    margin:6px;
+    border-color: #000000b4;
+    border-style:ridge;
+    
   }
 
   .container-tarea_opciones{
@@ -144,7 +157,22 @@ span{
     justify-content: space-between;
     gap: 1rem;
   }
+
+  .container-tarea:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    border-color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px #00000015;
+  }
   
+
+  .container-tarea.hecha {
+    background-color:#d4eddae9;
+    
+}
+  
+
   .listaInterna {
     list-style: none;
     padding-left: 10px;
@@ -164,11 +192,10 @@ span{
         flex-direction: row; 
         flex-wrap: nowrap;
     }
-    /*
-    .seccion-formulario, .seccion-lista {        
-        flex-grow: 1;
-        min-height: 400px;
-    }*/
+
+    .box-date{
+        width:40%;
+    }   
     
 }
 
