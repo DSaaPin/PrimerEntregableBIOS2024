@@ -4,28 +4,24 @@ let tareas = [
         titulo: "Hacer compras fiesta",
         descripcion: "Comprar hamburguesas, bebida, sal",
         fecha: "2024-08-21",
-        estado: "Pendiente",
     },
     {
         id: 2,
         titulo: "Médico",
         descripcion: "Dermatólogo, Dr Díaz",
         fecha: "2024-08-26",
-        estado: "Hecho",
     },
     {
         id: 3,
         titulo: "Llamar electricista",
         descripcion: "Luz cocina y chequeo",
         fecha: "2024-08-21",
-        estado: "Pendiente",
     },
     {
         id: 4,
         titulo: "Veterinaria",
         descripcion: "Pagar cuota",
         fecha: "2024-08-15",
-        estado: "Pendiente",
     },
 ];
 
@@ -46,16 +42,16 @@ function mostrarTareas() {
                                 <div>
                                     <li class="liTitulo">${tarea.titulo}
                                         <ul class="listaInterna">
-                                            <li>${tarea.descripcion} muestro el id para probar ${tarea.id}</li>
+                                            <li>${tarea.descripcion}</li>
                                             <li>${tarea.fecha}</li>
                                         </ul>
                                     </li>
                                 </div>
                                 <div class="container-tarea_opciones">
-                                    <div><input type="checkbox" onchange="terminarTarea(this)" name="tareaCheck" id="check-${tarea.id}" value="tareaCheck">
+                                    <div><input type="checkbox" onchange="terminarTarea(this)" class = "check" name="tareaCheck" id="check-${tarea.id}" value="tareaCheck">
                                     </div>
                                     <div>
-                                        <button onclick="eliminarTarea(${tarea.id})">Borrar</button>
+                                        <button onclick="eliminarTarea(${tarea.id})"><i class="fas fa-trash-alt"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +59,6 @@ function mostrarTareas() {
     })
 
     elementoLista.innerHTML = elementosTareas.join("")
-
 
 }
 
@@ -76,7 +71,7 @@ function agregarTarea(t) {
     const formData = new FormData(form)
     const tarea = {}
     contadorId++
-    tarea.id = contadorId 
+    tarea.id = contadorId
 
     formData.forEach((valor, clave) => tarea[clave] = valor)
 
@@ -85,33 +80,31 @@ function agregarTarea(t) {
     mostrarTareas()
 
     form.reset()
- }
+}
 
-function terminarTarea(checkbox) { 
+function terminarTarea(checkbox) {
 
     const divTarea = checkbox.closest('.container-tarea');
-    
-        if (checkbox.checked) {
-            divTarea.classList.add("hecha") 
-        } else {
-            divTarea.classList.remove("hecha")
-        }
+
+    if (checkbox.checked) {
+        divTarea.classList.add("hecha")
+    } else {
+        divTarea.classList.remove("hecha")
     }
+}
 
 
 function eliminarTarea(tareaId) {
     const isConfirm = confirm("Está seguro de eliminar esta tarea?")
 
-    if(!isConfirm) return
+    if (!isConfirm) return
 
     tareas = tareas.filter((tarea) => tarea.id != tareaId)
 
     mostrarTareas()
- }
-
-
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     mostrarTareas()
-    
+
 })
